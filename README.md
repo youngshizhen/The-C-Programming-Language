@@ -287,9 +287,40 @@ no other routine will be able to access buf and bufp.
 2. internal static variables are local to a particular function , which means that internal static variables provide private, permanent storage within a function.
 ```
 
-```
+```c
+Register Variables:
+1. register declaration advised the compiler that the variable in question will be heavily used.
+
+register int x;
+register char c;
+
 ```
 
+```c
+Block Structure:
+
+if (n>1){
+	int i;  # this i is unrelated to any i outside the block
+}
+
+int x;
+int y;
+f (double x){
+	double y;
+}
+```
+
+```c
+Initialization:
+```
+
+```c
+Recursion:
+```
+
+```c
+The C Preprocessor:
+```
 
 
 
