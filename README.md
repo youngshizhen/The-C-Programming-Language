@@ -254,16 +254,37 @@ Functions Returning Non-integers:
 2. Double atof(), if no params, all parameter checking is turned off. 
 ```
 
-```
-```
-
-```
-```
-
-```
+```c
+External Variables:
+1. C does not allow functions to be defined inside other functions.
+2. If two functions must share some data, yet neither calls the other, it is often most convenitent if the shared data kept in external varibales.
 ```
 
+```c
+Scope Rules:
+1. The functions and external variables need not all be compiled at the same time.
+2. extern declaration is mandatory if an external variable is to be referred to before it is defined.
+3. Dinstinguish between the declaration of an external variable and its definition. 
+4. extern int sp; extern double val[]; are just declaration, no storage is set, to be determined later
 ```
+
+```c
+Header Files:
+1. xxx.h for the header file name
+2. #include "xxx.h" 
+```
+
+```c
+Static Variables:
+1. the static declaration, applied to an external variable or function, litmits the scope of that object to the rest of the source file being compiled.
+static char buf[BUFSIZE];
+static int bufp = 0;
+
+int get ch(void){...}
+void ungetch(int c) {...}
+no other routine will be able to access buf and bufp.
+
+2. internal static variables are local to a particular function , which means that internal static variables provide private, permanent storage within a function.
 ```
 
 ```
