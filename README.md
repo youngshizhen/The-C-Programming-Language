@@ -343,6 +343,21 @@ The C Preprocessor:
 ```
 
 ## Chapter 5
+Pointers abd Functions Arguments:
+1. Since C passes arguments to function by value, there is no direct way for the called function to alter a variable in the calling function.
+```c
+void swap(int x, int y) this will only swaps copies of a and b
+
+swap(&a, &b) to pass pointers to the values to be changed
+```
+Character Pointers and Functions:
+
+Pointer Arrays; Pointers to Pointers:
+1. pointers in arrays to help sorting strings:
+```c
+char *lineptr[5000] says the lineptr is an array of 5000 elements, each elemnet of which is a pointer to a char. 
+lineptr[i] is a character pointer, *lineptr[i] is the character it points to.
+```
 
 [Chapter 1](#chapter-1)
 ## The largest heading
